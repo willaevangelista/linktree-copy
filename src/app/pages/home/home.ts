@@ -7,4 +7,6 @@ import { Links } from "../../components/links/links";
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })
-export class Home {}
+export class Home {
+  currentYear: number = new Date().getFullYear();
+}

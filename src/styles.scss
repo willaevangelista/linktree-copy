@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #133970;
+
+    background:
+        radial-gradient(circle at 15% 20%, #ffcbdb 0%, transparent 45%),
+        radial-gradient(circle at 80% 25%, #60a5fa 0%, transparent 50%),
+        radial-gradient(circle at 30% 75%, #a78bfa 0%, transparent 55%),
+        radial-gradient(circle at 75% 80%, #22d3ee 0%, transparent 55%),
+        radial-gradient(circle at 50% 50%, #f0f9ff 0%, transparent 60%),
+        #ffffff;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
