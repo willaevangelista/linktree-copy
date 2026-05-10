@@ -1,11 +1,28 @@
 <ul class="linksList">
+  @for (link of links; track link.url) {
     <li>
-        <a href="">esse é um link</a>
+      @if (link.isMap) {
+        <a [href]="link.url" target="_blank" rel="noopener noreferrer" class="mapLink">
+          <iframe
+            [src]="getMapEmbedUrl(link.url)"
+            width="100%"
+            height="200"
+            style="border:0; border-radius: 8px 8px 0 0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+          <span>📍 {{ link.title }}</span>
+        </a>
+      } @else {
+        <a [href]="link.url" target="_blank" rel="noopener noreferrer">
+          {{ link.title }}
+        </a>
+      }
     </li>
-    <li>
-        <a href="">esse é outro link</a>
-    </li>
-    <li>
-        <a href="">esse é um link diferente</a>
-    </li>
+  } @empty {
+    @if (showEmpty) {
+      <li>Not found</li>
+    }
+  }
 </ul>

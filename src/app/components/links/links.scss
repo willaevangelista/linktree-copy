@@ -26,3 +26,30 @@
         }
     }
 }
+
+.mapLink {
+  text-decoration: none;
+  display: block;
+  color: #373737;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+
+  iframe {
+    display: block;
+    pointer-events: none;
+  }
+
+  span {
+    display: block;
+    padding: 12px;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  &:hover {
+    transform: scale(1.02);
+    background-color: #f5f5f5;
+  }
+}
