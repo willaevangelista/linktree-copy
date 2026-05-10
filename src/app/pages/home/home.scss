@@ -34,3 +34,20 @@
         font-size: 12px;
     }
 }
+
+.socialIcons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 16px;
+
+  a {
+    color: #133970;
+    font-size: 30px;
+    transition: transform 0.5s;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
